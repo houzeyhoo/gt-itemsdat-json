@@ -7,7 +7,7 @@ Make sure you have Python 3.11 installed. Run `python itemsdat-json <path to ite
 If something doesn't work, it's likely this parser is out of date, in which case you might want to edit the `template.py` file. The `itemsdat-info` script might also help with figuring out what changes the new version brings.
 
 ## Docs
-For more detailed information, you can refer to the following resources:
+For more detailed information about `items.dat` properties, you can refer to the following resources:
 
 - [Cypher Documentation](/docs/cypher.md)
 - [Items.dat Format](/docs/itemsdat.md)
