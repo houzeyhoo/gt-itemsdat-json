@@ -58,13 +58,13 @@ def parse_itemsdat(buffer: BinaryIO) -> dict:
 # Run the parser. # Usage: python itemsdat-parser <items.dat path>
 if __name__ == "__main__":
     if len(sys.argv) <= 1:
-        print("Usage: python itemsdat-json <items.dat path>", file=sys.stderr)
+        print("Usage: python itemsdat-json <items.dat path> [> <output.json> path (optional)]", file=sys.stderr)
         exit(1)
 
-    # Output to file.
-    with open(sys.argv[1], "rb") as file:
+    input_file = sys.argv[1]
+    output_file = sys.argv[2] if len(sys.argv) > 2 else None
+
+    # Output to stdout.
+    with open(input_file, "rb") as file:
         data = parse_itemsdat(file)
-        output_file = "items.json"
-        with open(output_file, "w") as outfile:
-            json.dump(data, outfile, indent=4)
-        print(f"Output written to {output_file}")
+        json.dump(data, sys.stdout, indent=4)
