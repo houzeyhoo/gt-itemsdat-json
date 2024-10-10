@@ -12,7 +12,7 @@ py itemsdat-json <path to items.dat>
 If you want to save the output to a file instead of printing it to the console, you can redirect the output using shell redirection like this:
 
 ```bash
-py itemsdat-json <path to items.dat> > output.json
+py itemsdat-json <path to items.dat> > <path to output.json>
 ```
 This will save the output to `output.json` instead of printing it to the console.
 
