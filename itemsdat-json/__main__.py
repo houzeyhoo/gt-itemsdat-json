@@ -62,7 +62,6 @@ if __name__ == "__main__":
         exit(1)
 
     input_file = sys.argv[1]
-    output_file = sys.argv[2] if len(sys.argv) > 2 else None
 
     # Output to stdout.
     with open(input_file, "rb") as file:
